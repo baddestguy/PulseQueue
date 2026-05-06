@@ -1,0 +1,23 @@
+@PulseQueue.Api_HostAddress = http://localhost:8080
+@jobId = replace-with-job-id
+
+POST {{PulseQueue.Api_HostAddress}}/jobs
+Content-Type: application/json
+
+{
+  "type": "SendEmail",
+  "payload": {
+    "to": "customer@example.com",
+    "template": "InvoiceReminder"
+  }
+}
+
+###
+
+GET {{PulseQueue.Api_HostAddress}}/jobs/{{jobId}}
+Accept: application/json
+
+###
+
+GET {{PulseQueue.Api_HostAddress}}/health
+Accept: application/json

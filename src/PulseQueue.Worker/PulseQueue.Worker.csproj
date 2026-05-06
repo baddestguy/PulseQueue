@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-PulseQueue.Worker-eb9da836-c9c7-48f0-84c8-46e71a6164ef</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PulseQueue.Domain\PulseQueue.Domain.csproj" />
+    <ProjectReference Include="..\PulseQueue.Infrastructure\PulseQueue.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
